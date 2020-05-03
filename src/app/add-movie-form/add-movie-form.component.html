@@ -1,0 +1,85 @@
+<div class="ui raised very padded text container mtop segment">
+  <h2 class="ui header">{{ mode }} movie</h2>
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="movieForm" class="ui form">
+    <div class="field">
+      <label>Movie Name</label>
+      <input [formControlName]="'name'" type="text" placeholder="Movie Name" />
+    </div>
+
+    <div class="field">
+      <label>Movie Rating</label>
+      <input
+        [formControlName]="'rating'"
+        type="number"
+        placeholder="Movie Rating"
+      />
+    </div>
+    <div class="field">
+      <label>Movie Popularity</label>
+      <input
+        [formControlName]="'popularity'"
+        type="number"
+        placeholder="Movie Popularity"
+      />
+    </div>
+    <div class="field">
+      <label>Movie Cast</label>
+      <input
+        [formControlName]="'movieCast'"
+        type="text"
+        placeholder="Movie Cast"
+      />
+    </div>
+    <div class="field">
+      <label>Movie Language</label>
+      <input
+        [formControlName]="'language'"
+        type="text"
+        placeholder="Movie Language"
+      />
+    </div>
+
+    <div class="field">
+      <label>Movie Genre</label>
+      <input
+        [formControlName]="'genre'"
+        type="text"
+        placeholder="Movie Genre"
+      />
+    </div>
+
+    <div class="field">
+      <label>Movie Duration</label>
+      <input
+        [formControlName]="'duration'"
+        type="text"
+        placeholder="Movie Duration"
+      />
+    </div>
+
+    <div class="field">
+      <label>Movie Url</label>
+      <input
+        [formControlName]="'imageUrl'"
+        type="text"
+        placeholder="Movie Url"
+      />
+    </div>
+    <div class="field">
+      <label>IMDB Rating</label>
+      <input
+        [formControlName]="'imdbRating'"
+        type="text"
+        placeholder="IMDB Rating"
+      />
+    </div>
+    <div class="field">
+      <label>Movie Synopsis</label>
+      <textarea [formControlName]="'synopsis'"></textarea>
+    </div>
+    <button [disabled]="!movieForm.valid" class="ui button" type="submit">
+      Submit
+    </button>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+<div class="ui vertical stripe segment">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="six wide column">
+        <app-movie-card [header]="'Weekend releases'">
+          <app-movie-list
+            class="item"
+            (onMovieSelect)="handleMovieSelect($event)"
+            [movie]="movie"
+            *ngFor="let movie of movies"
+          >
+          </app-movie-list>
+        </app-movie-card>
+        <a [routerLink]="['/add']" class="ui bottom secondary attached button"
+          >Add movie</a
+        >
+      </div>
+      <div class="ten wide column">
+        <app-movie-card>
+          <app-movie-detail [selectedMovie]="selectedMovie"></app-movie-detail>
+        </app-movie-card>
+      </div>
+    </div>
+  </div>
+</div>

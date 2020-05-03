@@ -1,0 +1,26 @@
+<div class="ui inverted vertical masthead center aligned segment">
+  <div class="ui container">
+    <div class="ui large secondary inverted pointing menu">
+      <a class="toc item">
+        <fa-icon [icon]="faFilm"></fa-icon>
+      </a>
+
+      <!-- <a class="active item">Home</a>
+      <a class="item">Gallery</a>
+      <a class="item">Contacts</a> -->
+
+      <!-- <a class="item" *ngFor="let item of navItems" [href]="item.path">
+        {{ item.text }}
+      </a> -->
+
+      <a
+        [routerLink]="[item.path]"
+        routerLinkActive="active"
+        *ngFor="let item of navItems"
+        class="item"
+      >
+        {{ item.text }}
+      </a>
+    </div>
+  </div>
+</div>

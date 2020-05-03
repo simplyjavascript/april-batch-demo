@@ -1,0 +1,13 @@
+<div>
+  <div (click)="selectedMovie()" class="right floated content">
+    <a
+      [ngClass]="{ red: movie.rating > 4, teal: movie.rating < 4 }"
+      class="ui tag label"
+    >
+      {{ movie.rating }}</a
+    >
+  </div>
+  <div class="content">
+    {{ movie.name }}
+  </div>
+</div>

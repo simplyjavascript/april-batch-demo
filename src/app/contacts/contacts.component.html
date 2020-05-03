@@ -1,0 +1,9 @@
+<div class="ui raised very padded text container segment mtop">
+  <h2 class="ui header">{{ contact.name }}</h2>
+  <p class="lead">{{ contact.address | uppercase }}</p>
+  <p>{{ contact.mail | lowercase }}</p>
+  <p>Starts at {{ contact.startDate | date: "fullTime" }}</p>
+  <p>Fees: {{ contact.fees | number: "3.1-2" | currency: "INR" }}</p>
+  <hr class="my-4" />
+  <p>{{ contact.description }}</p>
+</div>

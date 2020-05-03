@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+* {
+  font-family: "Raleway", sans-serif;
+}
+.ui.grid > .row > [class*="middle aligned"].column,
+.ui.grid > [class*="middle aligned"].column:not(.row),
+.ui.grid > [class*="middle aligned"].row > .column,
+.ui[class*="middle aligned"].grid > .column:not(.row),
+.ui[class*="middle aligned"] .grid > .row > .column {
+  align-self: flex-start !important;
+}
+.ui.grid > .row > [class*="middle aligned"].column,
+.ui.grid > [class*="middle aligned"].column:not(.row),
+.ui.grid > [class*="middle aligned"].row > .column,
+.ui[class*="middle aligned"].grid > .column:not(.row),
+.ui[class*="middle aligned"].grid > .row > .column {
+  align-self: flex-start !important;
+}
+body {
+  background-color: #f1f2f5;
+}
+
+.box-shadow {
+  box-shadow: 15px 15px 8px 0 rgba(34, 36, 38, 0.12),
+    5px 5px 20px 0 rgba(34, 36, 38, 0.15) !important;
+}
